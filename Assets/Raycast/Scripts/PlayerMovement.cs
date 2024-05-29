@@ -66,7 +66,7 @@ public class PlayerMovement : MonoBehaviour
 
     private bool IsCanJumping()
     {
-        float laserLength = 0.025f;
+        float laserLength = 1.25f;
 
         int layerMask = LayerMask.GetMask("Ground", "Cloud");
 

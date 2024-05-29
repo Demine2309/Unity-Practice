@@ -4,15 +4,21 @@ using UnityEngine;
 
 public class CloudManage : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    [SerializeField] private Renderer cloud;
+    [SerializeField] private Transform startPos;
 
-    // Update is called once per frame
-    void Update()
+    private void Update()
     {
-        
+        int layerMask = LayerMask.GetMask("Cloud");
+
+        RaycastHit2D hit = Physics2D.Raycast(startPos.position, Vector2.down, 1.25f, layerMask);
+
+        if (hit.collider != null)
+            if (hit.collider.gameObject == cloud.gameObject)
+                cloud.material.color = new Color(0.8676071f, 0.8679245f, 0.741011f, 1f);
+            else
+                cloud.material.color = new Color(0.8676071f, 0.8679245f, 0.741011f, 0.3137255f);
+        else
+            cloud.material.color = new Color(0.8676071f, 0.8679245f, 0.741011f, 0.3137255f);
     }
 }

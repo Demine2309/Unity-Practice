@@ -494,6 +494,7 @@ GameObject:
   - component: {fileID: 1151751063}
   - component: {fileID: 1151751062}
   - component: {fileID: 1151751066}
+  - component: {fileID: 1151751067}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -558,7 +559,7 @@ BoxCollider2D:
     serializedVersion: 2
     m_Bits: 4294967295
   m_IsTrigger: 0
-  m_UsedByEffector: 0
+  m_UsedByEffector: 1
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
@@ -657,6 +658,25 @@ MonoBehaviour:
   startPos: {fileID: 1889646368}
   speed: 8
   jumpForce: 11
+--- !u!251 &1151751067
+PlatformEffector2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1151751061}
+  m_Enabled: 1
+  m_UseColliderMask: 1
+  m_ColliderMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RotationalOffset: 0
+  m_UseOneWay: 0
+  m_UseOneWayGrouping: 0
+  m_SurfaceArc: 180
+  m_UseSideFriction: 0
+  m_UseSideBounce: 0
+  m_SideArc: 1
 --- !u!1 &1156655067
 GameObject:
   m_ObjectHideFlags: 0
@@ -954,10 +974,30 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 90
       objectReference: {fileID: 0}
+    - target: {fileID: 2379093953479198908, guid: 75821e893f8042140ac4acade1492f1c, type: 3}
+      propertyPath: m_Color.a
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6821545009196073066, guid: 75821e893f8042140ac4acade1492f1c, type: 3}
       propertyPath: m_IsTrigger
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6821545009196073066, guid: 75821e893f8042140ac4acade1492f1c, type: 3}
+      propertyPath: m_UsedByEffector
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6821545009196073066, guid: 75821e893f8042140ac4acade1492f1c, type: 3}
+      propertyPath: m_UsedByComposite
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7143842237711807289, guid: 75821e893f8042140ac4acade1492f1c, type: 3}
+      propertyPath: cloud
+      value: 
+      objectReference: {fileID: 1836352795}
+    - target: {fileID: 7143842237711807289, guid: 75821e893f8042140ac4acade1492f1c, type: 3}
+      propertyPath: startPos
+      value: 
+      objectReference: {fileID: 1889646368}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1028,6 +1068,10 @@ PrefabInstance:
       propertyPath: m_IsTrigger
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7143842237711807289, guid: 75821e893f8042140ac4acade1492f1c, type: 3}
+      propertyPath: startPos
+      value: 
+      objectReference: {fileID: 1889646368}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1244,6 +1288,11 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!212 &1836352795 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 2379093953479198908, guid: 75821e893f8042140ac4acade1492f1c, type: 3}
+  m_PrefabInstance: {fileID: 1513015726}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1889646367
 GameObject:
   m_ObjectHideFlags: 0
@@ -1268,7 +1317,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1889646367}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.496, z: 0}
+  m_LocalPosition: {x: 0, y: 0.25, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1335,6 +1384,10 @@ PrefabInstance:
       propertyPath: m_IsTrigger
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7143842237711807289, guid: 75821e893f8042140ac4acade1492f1c, type: 3}
+      propertyPath: startPos
+      value: 
+      objectReference: {fileID: 1889646368}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1405,6 +1458,10 @@ PrefabInstance:
       propertyPath: m_IsTrigger
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7143842237711807289, guid: 75821e893f8042140ac4acade1492f1c, type: 3}
+      propertyPath: startPos
+      value: 
+      objectReference: {fileID: 1889646368}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
