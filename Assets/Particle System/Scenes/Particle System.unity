@@ -135,6 +135,7 @@ GameObject:
   - component: {fileID: 679898515}
   - component: {fileID: 679898520}
   - component: {fileID: 679898519}
+  - component: {fileID: 679898521}
   - component: {fileID: 679898518}
   - component: {fileID: 679898517}
   m_Layer: 0
@@ -262,7 +263,7 @@ ParticleSystemRenderer:
   m_VelocityScale: 0
   m_LengthScale: 2
   m_SortingFudge: 0
-  m_NormalDirection: 0.5
+  m_NormalDirection: 0.2
   m_ShadowBias: 0
   m_RenderAlignment: 0
   m_Pivot: {x: 0, y: 0, z: 0}
@@ -473,7 +474,7 @@ ParticleSystem:
       serializedVersion: 2
       minMaxState: 0
       minColor: {r: 1, g: 1, b: 1, a: 1}
-      maxColor: {r: 0.8490566, g: 0.38429245, b: 0.06007475, a: 1}
+      maxColor: {r: 1, g: 1, b: 1, a: 1}
       maxGradient:
         serializedVersion: 2
         key0: {r: 1, g: 1, b: 1, a: 1}
@@ -5109,6 +5110,21 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &679898521
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 679898514}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 329cd6dd2c2883645af6314a4babf357, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rb: {fileID: 679898520}
+  moveSpeed: 15
+  dragForce: 3
 --- !u!1 &1089039137
 GameObject:
   m_ObjectHideFlags: 3
@@ -5158,8 +5174,8 @@ MonoBehaviour:
   m_LookaheadTime: 0
   m_LookaheadSmoothing: 0
   m_LookaheadIgnoreY: 0
-  m_XDamping: 1
-  m_YDamping: 1
+  m_XDamping: 8
+  m_YDamping: 8
   m_ZDamping: 1
   m_TargetMovementOnly: 1
   m_ScreenX: 0.5
@@ -5306,7 +5322,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 2
-  m_BackGroundColor: {r: 0.2747419, g: 0.83606553, b: 0.9245283, a: 0}
+  m_BackGroundColor: {r: 0.9009434, g: 0.9862753, b: 1, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
