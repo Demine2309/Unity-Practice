@@ -6,6 +6,6 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Raycast/Scenes/SampleScene.unity
-    guid: 2cda990e2423bbf4892e6590ba056729
+    path: Assets/OpenGl/Demo.unity
+    guid: 04a4687d6117b824e90b1c90ebaec2b3
   m_configObjects: {}

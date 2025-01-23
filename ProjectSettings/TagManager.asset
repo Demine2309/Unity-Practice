@@ -5,6 +5,9 @@ TagManager:
   serializedVersion: 2
   tags:
   - Bridge
+  - EnemyBullet
+  - PlayerBullet
+  - Enemy
   layers:
   - Default
   - TransparentFX
@@ -14,9 +17,9 @@ TagManager:
   - UI
   - Ground
   - Cloud
-  - 
-  - 
-  - 
+  - Bullet
+  - Bound
+  - Enemy
   - 
   - 
   - 
